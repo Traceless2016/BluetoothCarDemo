@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     // Whether the Log Fragment is currently shown
     private boolean mLogShown;
-    private ImageButton Ibtbluetooth;
+    private ImageButton Ibtbluetooth,Ibtairplane;
     public static BluetoothChatFragment fragment;
     /*
     声明一个类AFactory，里面有静态变量public static Activity A；在A中调用
@@ -94,7 +94,9 @@ AFactory.A = this;
      */
     public void intiView(){
         Ibtbluetooth = findViewById( R.id.bluetoothcar2 );
+        Ibtairplane = findViewById( R.id.airplane );
         Ibtbluetooth.setOnClickListener( this );
+        Ibtairplane.setOnClickListener( this );
 
 
     }
@@ -110,6 +112,11 @@ AFactory.A = this;
                 intent.setClass( this,bluetoothcar.class );
                 startActivity( intent );
                 break;
+            case R.id.airplane:
+                Toast.makeText( this,"您点击了airplane",Toast.LENGTH_SHORT ).show();
+                Intent intent1 = new Intent(  );
+                intent1.setClass( this,airplaneActivity.class );
+                startActivity( intent1 );
         }
 
     }

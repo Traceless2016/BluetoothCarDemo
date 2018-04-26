@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".DeviceListActivity" />
-        <activity android:name=".bluetoothcar"></activity>
+        <activity android:name=".bluetoothcar" />
+        <activity android:name=".airplaneActivity"></activity>
     </application>
 
 </manifest>
