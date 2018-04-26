@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/star2">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/controlLayout"
+        android:layout_below="@id/sample_content_fragment1">
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/left_right_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/left_right"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="11dp"
+                android:text="left_right："
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <SeekBar
+
+                android:id="@+id/left_right"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="23dp"
+                android:focusable="true"
+                android:max="180"
+                android:maxHeight="4.0dip"
+                android:minHeight="4.0dip"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:progressDrawable="@layout/po_seekbar"
+                android:thumb="@layout/seekbar_thumb" />
+
+            <ImageView
+                android:id="@+id/right_icon2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/left_right_text"
+                android:layout_alignEnd="@+id/left_right_text"
+                android:background="@mipmap/arrow_18"
+                android:rotation="90" />
+
+            <ImageView
+                android:id="@+id/left_icon2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/left_right_text"
+                android:layout_alignStart="@+id/left_right"
+                android:background="@mipmap/arrow_18"
+                android:rotation="-90" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/relativeLayout">
+
+            <SeekBar
+
+                android:id="@+id/foreward_back"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:focusable="true"
+                android:max="180"
+                android:maxHeight="4.0dip"
+                android:minHeight="4.0dip"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:progressDrawable="@layout/po_seekbar"
+                android:rotation="-90"
+                android:thumb="@layout/seekbar_thumb" />
+
+            <TextView
+                android:id="@+id/tv_seekBar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:rotation="-90"
+                android:text="foreward_back：  "
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/foreward3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/tv_seekBar1"
+                android:layout_alignStart="@+id/foreward_back"
+                android:layout_marginBottom="18dp"
+                android:background="@mipmap/arrow_03" />
+
+            <ImageView
+                android:id="@+id/back3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="13dp"
+                android:layout_marginStart="20dp"
+                android:background="@mipmap/arrow_03"
+                android:rotation="180" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/alarm1Layout"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignTop="@+id/relativeLayout3"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/alarm1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/alarmgreen" />
+
+            <TextView
+                android:id="@+id/alarm1_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="11dp"
+                android:text="alarm"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/stopLyout"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/alarm1Layout"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@+id/relativeLayout3"
+            android:layout_toStartOf="@+id/relativeLayout"
+            android:gravity="center">
+            <Button
+                android:id="@+id/start"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:text="@string/start"
+                android:textColor="@color/theme_black"
+                android:gravity="center"
+                android:background="@drawable/btn_nor_down_start" />
+                <!--android:background="@drawable/border_line_while"/>-->
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/sample_content_fragment1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="2">
+
+    </FrameLayout>
+
+
+</RelativeLayout>

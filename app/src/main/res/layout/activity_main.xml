@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sample_main_layout"
+    android:orientation="vertical"
+    android:background="@mipmap/groundpicture">
+    <ViewAnimator
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:ignore="Suspicious0dp"
+        android:id="@+id/sample_output"
+        android:layout_weight="2">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/intro_message"
+                android:padding="15dp"
+                android:textColor="@color/colorPrimary"/>
+
+
+        </ScrollView>
+        <fragment
+            android:name="com.example.trace.myapplication.LogFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/log_fragment"/>
+
+    </ViewAnimator>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:rowCount="3"
+        android:layout_gravity="top"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:id="@+id/bluetoothcar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/car"
+            android:padding="10dp" />
+
+    </GridLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimaryDark"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:id="@+id/sample_content_fragment">
+
+    </FrameLayout>
+
+</LinearLayout>
